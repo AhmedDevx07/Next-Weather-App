@@ -1,2 +1,26 @@
 @import "tailwindcss";
- 
+
+:root {
+  --bg-deep: #0a0f1a;
+  --card-bg: rgba(22, 30, 46, 0.7);
+  --accent-blue: #38bdf8;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: white;
+  @apply antialiased;
+}
+
+.glass-card {
+  @apply bg-[#161e2e]/70 border border-white/5 backdrop-blur-xl rounded-[2rem];
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}

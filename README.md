@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌤️ SkyCast Pro – Modern Weather Dashboard
 
-## Getting Started
+A fully modern and responsive **Weather Dashboard** built with **Next.js, TypeScript, and Tailwind CSS**.
+It provides real-time weather insights with a clean UI/UX and detailed forecasts.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+
+🔗 [https://next-weather-app-nine.vercel.app/](https://next-weather-app-nine.vercel.app/)
+
+## 💻 GitHub Repository
+
+📦 [https://github.com/AhmedDevx07/Next-Weather-App](https://github.com/AhmedDevx07/Next-Weather-App)
+
+---
+
+## ✨ Features
+
+* 🌍 **City-based Weather Search**
+* 📊 **Dashboard Overview**
+* 🌡️ **Current Weather Data**
+* ⏰ **24-Hour Forecast**
+* 📅 **7-Day Forecast**
+* 🌫️ **Air Quality Index**
+* ⚠️ **Weather Alerts**
+* 💨 **Atmosphere Details**
+
+  * Feels Like Temperature
+  * Wind Speed
+  * Humidity
+  * Pressure
+  * Visibility
+* 🎨 **Modern UI/UX Design**
+* 📱 **Fully Responsive**
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** Next.js
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Deployment:** Vercel
+* **API:** Weather API (e.g., OpenWeather or similar)
+
+---
+
+## 📁 Project Structure
+
+```
+Next-Weather-App/
+│── app/
+│   ├── dashboard/
+│   ├── current-weather/
+│   ├── hourly-forecast/
+│   ├── seven-day/
+│   ├── air-quality/
+│   ├── alerts/
+│   ├── pagenotfound/
+│
+│── components/
+│── lib/ (API handling)
+│── public/
+│── styles/
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/AhmedDevx07/Next-Weather-App.git
+```
+
+2. **Navigate to project**
+
+```bash
+cd Next-Weather-App
+```
+
+3. **Install dependencies**
+
+```bash
+npm install
+```
+
+4. **Add environment variables**
+   Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_WEATHER_API_KEY=your_api_key_here
+```
+
+5. **Run development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open in browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
+ 
+## 🎯 Key Highlights
 
-## Learn More
+* Built using **modern Next.js App Router**
+* Clean and scalable **component architecture**
+* Optimized performance and fast loading
+* Professional dashboard UI inspired by real-world apps
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* 🌙 Dark/Light mode toggle
+* 📍 Auto-detect user location
+* 📊 Weather charts & graphs
+* 🔔 Notification system
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome!
+Feel free to fork this repo and submit a pull request.
+
+---
+ 
+
+## 👨‍💻 Author
+
+**Ahmed Devx**
+
+* GitHub: [https://github.com/AhmedDevx07](https://github.com/AhmedDevx07)
+
+---
+ 

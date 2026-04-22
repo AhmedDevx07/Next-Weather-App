@@ -21,7 +21,7 @@ It provides real-time weather insights with a clean UI/UX and detailed forecasts
 * 📊 **Dashboard Overview**
 * 🌡️ **Current Weather Data**
 * ⏰ **24-Hour Forecast**
-* 📅 **7-Day Forecast**
+* 📅 **5-Day Forecast**
 * 🌫️ **Air Quality Index**
 * ⚠️ **Weather Alerts**
 * 💨 **Atmosphere Details**
@@ -54,7 +54,7 @@ Next-Weather-App/
 │   ├── dashboard/
 │   ├── current-weather/
 │   ├── hourly-forecast/
-│   ├── seven-day/
+│   ├── five-day/
 │   ├── air-quality/
 │   ├── alerts/
 │   ├── pagenotfound/

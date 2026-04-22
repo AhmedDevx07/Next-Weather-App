@@ -83,9 +83,6 @@ export default async function WeatherAlertsPage({
 
           <div className="text-center md:text-left flex-1 space-y-3">
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="px-3 py-1 rounded-full bg-white/10 text-[10px] font-black uppercase tracking-widest border border-white/10">
-                Level: {statusTag}
-              </span>
               <h3 className="text-3xl md:text-4xl font-black tracking-tighter">
                 {alertTitle}
               </h3>

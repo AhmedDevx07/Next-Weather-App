@@ -1,6 +1,7 @@
 import { getWeatherData } from "@/app/lib/openweather";
 import SearchInput from "@/app/components/SearchInput";
 import { Wind, Droplets, Thermometer, Gauge, Eye, MapPin } from "lucide-react";
+import PageNotFound from "./page-not-found/PageNotFound";
 
 export default async function Dashboard({
   searchParams,
@@ -9,12 +10,21 @@ export default async function Dashboard({
 }) {
   const resolvedParams = await searchParams;
   const city = resolvedParams.city || "Karachi";
+
   const data = await getWeatherData(city);
+
+  if (!data || data.cod === "404" || data.cod === 404) {
+    return <PageNotFound />;
+  }
 
   return (
     <div className="space-y-6 md:space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
+          <div className="flex items-center gap-2 text-sky-500 font-black uppercase tracking-[0.3em] text-[10px]">
+            <div className="w-8 h-[2px] bg-sky-500" />
+            Live Insights
+          </div>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight">
             Weather <span className="text-sky-500">Hub</span>
           </h2>
@@ -26,6 +36,7 @@ export default async function Dashboard({
           <SearchInput />
         </div>
       </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Hero Card */}
         <div className="lg:col-span-2 bg-gradient-to-br from-sky-500 to-blue-700 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl shadow-sky-500/30">
@@ -34,7 +45,7 @@ export default async function Dashboard({
           <div className="relative z-10 flex flex-col justify-between h-full min-h-[400px]">
             <div className="flex justify-between items-start">
               <div className="space-y-2">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white">
                   {data.name}{" "}
                   <span className="text-sky-200/30 text-3xl md:text-5xl">
                     {data.sys.country}
@@ -53,7 +64,7 @@ export default async function Dashboard({
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 text-white">
               <div className="flex flex-col">
                 <div className="flex items-start">
                   <span className="text-9xl md:text-[12rem] font-black tracking-tighter leading-none">

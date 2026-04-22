@@ -61,17 +61,17 @@ const Sidebar = () => {
         </div>
 
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="bg-sky-500 p-2 rounded-xl text-white active:scale-90 transition-all shadow-lg shadow-sky-500/20"
+          onClick={() => setIsOpen(true)} // Sirf Open karne ke liye
+          className="bg-sky-500 p-2.5 rounded-xl text-white active:scale-90 transition-all shadow-lg shadow-sky-500/20"
         >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
+          <Menu size={22} />
         </button>
       </div>
 
       {/* Mobile Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[160] lg:hidden"
+          className="fixed inset-0 bg-black/80 backdrop-blur-md z-[160] lg:hidden animate-in fade-in duration-300"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -79,11 +79,29 @@ const Sidebar = () => {
       {/* Sidebar Panel */}
       <aside
         className={`
-        fixed left-0 top-0 h-screen w-72 bg-[#0a0f1a] border-r border-white/5 
-        flex flex-col z-[170] transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1)
-        ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-      `}
+  fixed left-0 top-0 h-screen w-80 bg-[#0a0f1a] border-r border-white/5 
+  flex flex-col z-[170] transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1)
+  ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+`}
       >
+        {/* MOBILE ONLY: Top Close Section */}
+        <div className="lg:hidden flex items-center justify-between p-6 border-b border-white/5 bg-white/[0.02]">
+          <div className="flex items-center gap-2">
+            <div className="bg-sky-500 p-2 rounded-xl shadow-xl shadow-sky-500/20 group-hover:rotate-6 transition-transform">
+              <Zap size={24} className="fill-white text-white" />
+            </div>
+
+            <h1 className="text-2xl font-black tracking-tighter italic text-white">
+              SKY<span className="text-sky-500">CAST</span>
+            </h1>
+          </div>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2.5 bg-white/5 hover:bg-red-500/10 rounded-2xl border border-white/10 hover:border-red-500/20 text-gray-400 hover:text-red-500 transition-all active:scale-90"
+          >
+            <X size={22} />
+          </button>
+        </div>
         {/* Responsive Logo Section (Desktop Focus) */}
         <div className="hidden lg:flex flex-col items-center justify-center pt-10 pb-8 px-6 w-full">
           <Link

@@ -1,9 +1,16 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { 
-  LayoutDashboard, CloudSun, Clock, CalendarDays, 
-  Wind, AlertTriangle, Menu, X, Zap 
+import {
+  LayoutDashboard,
+  CloudSun,
+  Clock,
+  CalendarDays,
+  Wind,
+  AlertTriangle,
+  Menu,
+  X,
+  Zap,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -17,11 +24,27 @@ const Sidebar = () => {
 
   const menuItems = [
     { name: "Dashboard", icon: <LayoutDashboard size={22} />, path: "/" },
-    { name: "Current Weather", icon: <CloudSun size={22} />, path: "/current-weather" },
-    { name: "Hourly Forecast", icon: <Clock size={22} />, path: "/hourly_forecast" },
-    { name: "7-Day Forecast", icon: <CalendarDays size={22} />, path: "/7-day-Forecast" },
+    {
+      name: "Current Weather",
+      icon: <CloudSun size={22} />,
+      path: "/current-weather",
+    },
+    {
+      name: "Hourly Forecast",
+      icon: <Clock size={22} />,
+      path: "/hourly_forecast",
+    },
+    {
+      name: "7-Day Forecast",
+      icon: <CalendarDays size={22} />,
+      path: "/7-day-Forecast",
+    },
     { name: "Air Quality", icon: <Wind size={22} />, path: "/air-quality" },
-    { name: "Weather Alerts", icon: <AlertTriangle size={22} />, path: "/weather-alerts" },
+    {
+      name: "Weather Alerts",
+      icon: <AlertTriangle size={22} />,
+      path: "/weather-alerts",
+    },
   ];
 
   return (
@@ -37,7 +60,7 @@ const Sidebar = () => {
           </h2>
         </div>
 
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-sky-500 p-2 rounded-xl text-white active:scale-90 transition-all shadow-lg shadow-sky-500/20"
         >
@@ -47,22 +70,26 @@ const Sidebar = () => {
 
       {/* Mobile Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[160] lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Sidebar Panel */}
-      <aside className={`
+      <aside
+        className={`
         fixed left-0 top-0 h-screen w-72 bg-[#0a0f1a] border-r border-white/5 
         flex flex-col z-[170] transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1)
         ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-      `}>
-        
+      `}
+      >
         {/* Responsive Logo Section (Desktop Focus) */}
         <div className="hidden lg:flex flex-col items-center justify-center pt-10 pb-8 px-6 w-full">
-          <Link href={`/?city=${city}`} className="flex items-center justify-center gap-2 group transition-transform active:scale-95">
+          <Link
+            href={`/?city=${city}`}
+            className="flex items-center justify-center gap-2 group transition-transform active:scale-95"
+          >
             <div className="bg-sky-500 p-2 rounded-xl shadow-xl shadow-sky-500/20 group-hover:rotate-6 transition-transform">
               <Zap size={24} className="fill-white text-white" />
             </div>
@@ -82,15 +109,23 @@ const Sidebar = () => {
                 key={item.name}
                 href={`${item.path}?city=${city}`}
                 className={`flex items-center gap-4 px-5 py-3.5 rounded-2xl transition-all duration-300 group ${
-                  isActive 
-                    ? "bg-sky-500 text-white shadow-lg shadow-sky-500/20" 
+                  isActive
+                    ? "bg-sky-500 text-white shadow-lg shadow-sky-500/20"
                     : "text-gray-500 hover:bg-white/5 hover:text-white"
                 }`}
               >
-                <span className={isActive ? "text-white" : "group-hover:text-sky-400 transition-colors"}>
+                <span
+                  className={
+                    isActive
+                      ? "text-white"
+                      : "group-hover:text-sky-400 transition-colors"
+                  }
+                >
                   {item.icon}
                 </span>
-                <span className="font-bold text-[13px] tracking-wide">{item.name}</span>
+                <span className="font-bold text-[13px] tracking-wide">
+                  {item.name}
+                </span>
               </Link>
             );
           })}
@@ -106,7 +141,9 @@ const Sidebar = () => {
               <p className="text-sm font-bold truncate">AhmedDevx07</p>
               <div className="flex items-center gap-1.5">
                 <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                <p className="text-[9px] text-emerald-500 font-black uppercase tracking-widest">Active Pro</p>
+                <p className="text-[9px] text-emerald-500 font-black uppercase tracking-widest">
+                  Active Pro
+                </p>
               </div>
             </div>
           </div>

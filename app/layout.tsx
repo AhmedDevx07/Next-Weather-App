@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/app/components/Sidebar";
-import { Suspense } from "react"; //  
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "SkyCast Pro | AhmedDevx07",
@@ -16,11 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#0a0f1a] text-white min-h-screen custom-scrollbar overflow-x-hidden">
-        
-        
-        <Suspense fallback={
-          <aside className="fixed left-0 top-0 h-screen w-72 bg-[#0a0f1a] border-r border-white/5 hidden lg:block" />
-        }>
+        <Suspense
+          fallback={
+            <aside className="fixed left-0 top-0 h-screen w-72 bg-[#0a0f1a] border-r border-white/5 hidden lg:block" />
+          }
+        >
           <Sidebar />
         </Suspense>
 

@@ -35,9 +35,9 @@ const Sidebar = () => {
       path: "/hourly_forecast",
     },
     {
-      name: "7-Day Forecast",
+      name: "5-Day Forecast",
       icon: <CalendarDays size={22} />,
-      path: "/7-day-Forecast",
+      path: "/5-day-Forecast",
     },
     { name: "Air Quality", icon: <Wind size={22} />, path: "/air-quality" },
     {

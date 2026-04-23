@@ -133,12 +133,13 @@ Feel free to fork this repo and submit a pull request.
 
 ---
  
-
 ## 👨‍💻 Author
 
-**Ahmed Devx**
+**Muhammad Ahmed (AhmedDevx07)**
+### 🌐 Connect With Me
 
-* GitHub: [https://github.com/AhmedDevx07](https://github.com/AhmedDevx07)
+* 🐙 GitHub: https://github.com/AhmedDevx07
+* 💼 LinkedIn: https://linkedin.com/in/ahmeddevx07
 
 ---
  

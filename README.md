@@ -133,13 +133,13 @@ Feel free to fork this repo and submit a pull request.
 
 ---
  
-## 👨‍💻 Author
+ ## 👨‍💻 Author
 
-**Muhammad Ahmed (AhmedDevx07)**
+**Muhammad Ahmed (AhmedDevx07)**  
+Frontend Developer | MERN Stack Learner
+
 ### 🌐 Connect With Me
 
-* 🐙 GitHub: https://github.com/AhmedDevx07
-* 💼 LinkedIn: https://linkedin.com/in/ahmeddevx07
-
----
- 
+* 🐙 GitHub: https://github.com/AhmedDevx07  
+* 💼 LinkedIn: https://linkedin.com/in/ahmeddevx07  
+* 🌐 Portfolio: https://ahmeddevx07.vercel.app/
